@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap");
+
+//reset
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+div,
+span,
+p,
+a,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+//common attribute
+html {
+  font-size: 16px;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #f7f3f0;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+
+  &::after {
+    display: block;
+    content: "";
+    width: 200%;
+    height: 200%;
+    background: url("../Assets/noise-background.png") repeat;
+    background-size: 10%;
+    opacity: 0.5;
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+    animation: grain 1s infinite;
+  }
+
+  @keyframes grain {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    20% {
+      transform: translate(-20%, 20%);
+    }
+    40% {
+      transform: translate(20%, -20%);
+    }
+    60% {
+      transform: translate(-20%, -10%);
+    }
+    80% {
+      transform: translate(-10%, 10%);
+    }
+  }
+}
+
+.intro__title,
+.work__title,
+.contact__title,
+.case-study__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  line-height: 0.8;
+}
+
+//frame setting
+#container {
+  width: 90vw;
+  margin: 0 auto;
+  position: relative;
+
+  .right-container {
+    width: 75%;
+    margin-left: auto;
+
+    @media (max-width: 600px) {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}

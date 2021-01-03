@@ -1,0 +1,1396 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+div,
+span,
+p,
+a,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #f7f3f0;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+body::after {
+  display: block;
+  content: "";
+  width: 200%;
+  height: 200%;
+  background: url("../Assets/noise-background.png") repeat;
+  background-size: 10%;
+  opacity: 0.5;
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  -webkit-animation: grain 1s infinite;
+          animation: grain 1s infinite;
+}
+
+@-webkit-keyframes grain {
+  0%,
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  20% {
+    -webkit-transform: translate(-20%, 20%);
+            transform: translate(-20%, 20%);
+  }
+  40% {
+    -webkit-transform: translate(20%, -20%);
+            transform: translate(20%, -20%);
+  }
+  60% {
+    -webkit-transform: translate(-20%, -10%);
+            transform: translate(-20%, -10%);
+  }
+  80% {
+    -webkit-transform: translate(-10%, 10%);
+            transform: translate(-10%, 10%);
+  }
+}
+
+@keyframes grain {
+  0%,
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  20% {
+    -webkit-transform: translate(-20%, 20%);
+            transform: translate(-20%, 20%);
+  }
+  40% {
+    -webkit-transform: translate(20%, -20%);
+            transform: translate(20%, -20%);
+  }
+  60% {
+    -webkit-transform: translate(-20%, -10%);
+            transform: translate(-20%, -10%);
+  }
+  80% {
+    -webkit-transform: translate(-10%, 10%);
+            transform: translate(-10%, 10%);
+  }
+}
+
+.intro__title,
+.work__title,
+.contact__title,
+.case-study__title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  line-height: 0.8;
+}
+
+#container {
+  width: 90vw;
+  margin: 0 auto;
+  position: relative;
+}
+
+#container .right-container {
+  width: 75%;
+  margin-left: auto;
+}
+
+@media (max-width: 600px) {
+  #container .right-container {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.text-frame {
+  display: block;
+  overflow: hidden;
+}
+
+.text-frame span {
+  display: block;
+  position: relative;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+
+.--active .text-frame > span {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+#container .--active.header .header__title .text-frame:nth-child(1) > span,
+#container .--active.header .header__year .text-frame:nth-child(1) > span,
+#container .--active.header .header__email .text-frame:nth-child(1) > span {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+#container .--active.header .header__nav .text-frame:nth-child(1) > span {
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+}
+
+#container .--active.intro .intro__title .text-frame > span {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+#container .--active.intro .intro__message .text-frame:nth-child(1) > span {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+#container .--active.intro .intro__current .text-frame > span {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+#container .--active.intro .intro__email .text-frame > span {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+#container .--active.about .about__intro .text-frame:nth-child(1) > span {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+#container .--active.about .about__skills .text-frame:nth-child(1) > span {
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+}
+
+#container .--active.work .work__list > li:nth-child(1):first-child::before {
+  width: 100%;
+  -webkit-transition: width 1.5s 0.3s;
+  transition: width 1.5s 0.3s;
+}
+
+#container .--active.work .work__list > li:nth-child(1)::after {
+  width: 100%;
+  -webkit-transition: width 1.5s 0.6s;
+  transition: width 1.5s 0.6s;
+}
+
+#container .--active.work .work__list > li:nth-child(1) .circle-container {
+  opacity: 1;
+  -webkit-transition: opacity 1s 0.5s;
+  transition: opacity 1s 0.5s;
+}
+
+#container .--active.work .work__list > li:nth-child(1) .text-frame > span {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+#container .--active.contact .contact__message .text-frame:nth-child(1) > span {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+#container .--active.contact .contact__list li:nth-child(1)::before {
+  width: 100%;
+  -webkit-transition: width 1s 0.5s;
+  transition: width 1s 0.5s;
+}
+
+#container .--active.contact .contact__list li:nth-child(1)::after {
+  width: 100%;
+  -webkit-transition: width 1s 0.7s;
+  transition: width 1s 0.7s;
+}
+
+#container .--active.contact .contact__list li:nth-child(1) .text-frame > span {
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+}
+
+#container .--active.header .header__title .text-frame:nth-child(2) > span,
+#container .--active.header .header__year .text-frame:nth-child(2) > span,
+#container .--active.header .header__email .text-frame:nth-child(2) > span {
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+}
+
+#container .--active.header .header__nav .text-frame:nth-child(2) > span {
+  -webkit-transition-delay: 0.9s;
+          transition-delay: 0.9s;
+}
+
+#container .--active.intro .intro__title .text-frame > span {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+#container .--active.intro .intro__message .text-frame:nth-child(2) > span {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+#container .--active.intro .intro__current .text-frame > span {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+#container .--active.intro .intro__email .text-frame > span {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+#container .--active.about .about__intro .text-frame:nth-child(2) > span {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+#container .--active.about .about__skills .text-frame:nth-child(2) > span {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+#container .--active.work .work__list > li:nth-child(2):first-child::before {
+  width: 100%;
+  -webkit-transition: width 1.5s 0.6s;
+  transition: width 1.5s 0.6s;
+}
+
+#container .--active.work .work__list > li:nth-child(2)::after {
+  width: 100%;
+  -webkit-transition: width 1.5s 0.9s;
+  transition: width 1.5s 0.9s;
+}
+
+#container .--active.work .work__list > li:nth-child(2) .circle-container {
+  opacity: 1;
+  -webkit-transition: opacity 1s 1s;
+  transition: opacity 1s 1s;
+}
+
+#container .--active.work .work__list > li:nth-child(2) .text-frame > span {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+#container .--active.contact .contact__message .text-frame:nth-child(2) > span {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+#container .--active.contact .contact__list li:nth-child(2)::before {
+  width: 100%;
+  -webkit-transition: width 1s 0.5s;
+  transition: width 1s 0.5s;
+}
+
+#container .--active.contact .contact__list li:nth-child(2)::after {
+  width: 100%;
+  -webkit-transition: width 1s 0.9s;
+  transition: width 1s 0.9s;
+}
+
+#container .--active.contact .contact__list li:nth-child(2) .text-frame > span {
+  -webkit-transition-delay: 0.9s;
+          transition-delay: 0.9s;
+}
+
+#container .--active.header .header__title .text-frame:nth-child(3) > span,
+#container .--active.header .header__year .text-frame:nth-child(3) > span,
+#container .--active.header .header__email .text-frame:nth-child(3) > span {
+  -webkit-transition-delay: 0.9s;
+          transition-delay: 0.9s;
+}
+
+#container .--active.header .header__nav .text-frame:nth-child(3) > span {
+  -webkit-transition-delay: 1.1s;
+          transition-delay: 1.1s;
+}
+
+#container .--active.intro .intro__title .text-frame > span {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+#container .--active.intro .intro__message .text-frame:nth-child(3) > span {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+#container .--active.intro .intro__current .text-frame > span {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+#container .--active.intro .intro__email .text-frame > span {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+#container .--active.about .about__intro .text-frame:nth-child(3) > span {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+#container .--active.about .about__skills .text-frame:nth-child(3) > span {
+  -webkit-transition-delay: 0.9s;
+          transition-delay: 0.9s;
+}
+
+#container .--active.work .work__list > li:nth-child(3):first-child::before {
+  width: 100%;
+  -webkit-transition: width 1.5s 0.9s;
+  transition: width 1.5s 0.9s;
+}
+
+#container .--active.work .work__list > li:nth-child(3)::after {
+  width: 100%;
+  -webkit-transition: width 1.5s 1.2s;
+  transition: width 1.5s 1.2s;
+}
+
+#container .--active.work .work__list > li:nth-child(3) .circle-container {
+  opacity: 1;
+  -webkit-transition: opacity 1s 1.5s;
+  transition: opacity 1s 1.5s;
+}
+
+#container .--active.work .work__list > li:nth-child(3) .text-frame > span {
+  -webkit-transition-delay: 0.9s;
+          transition-delay: 0.9s;
+}
+
+#container .--active.contact .contact__message .text-frame:nth-child(3) > span {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+#container .--active.contact .contact__list li:nth-child(3)::before {
+  width: 100%;
+  -webkit-transition: width 1s 0.5s;
+  transition: width 1s 0.5s;
+}
+
+#container .--active.contact .contact__list li:nth-child(3)::after {
+  width: 100%;
+  -webkit-transition: width 1s 1.1s;
+  transition: width 1s 1.1s;
+}
+
+#container .--active.contact .contact__list li:nth-child(3) .text-frame > span {
+  -webkit-transition-delay: 1.1s;
+          transition-delay: 1.1s;
+}
+
+#container .--active.header .header__title .text-frame:nth-child(4) > span,
+#container .--active.header .header__year .text-frame:nth-child(4) > span,
+#container .--active.header .header__email .text-frame:nth-child(4) > span {
+  -webkit-transition-delay: 1.1s;
+          transition-delay: 1.1s;
+}
+
+#container .--active.header .header__nav .text-frame:nth-child(4) > span {
+  -webkit-transition-delay: 1.3s;
+          transition-delay: 1.3s;
+}
+
+#container .--active.intro .intro__title .text-frame > span {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+#container .--active.intro .intro__message .text-frame:nth-child(4) > span {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+#container .--active.intro .intro__current .text-frame > span {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+#container .--active.intro .intro__email .text-frame > span {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+#container .--active.about .about__intro .text-frame:nth-child(4) > span {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+#container .--active.about .about__skills .text-frame:nth-child(4) > span {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+#container .--active.work .work__list > li:nth-child(4):first-child::before {
+  width: 100%;
+  -webkit-transition: width 1.5s 1.2s;
+  transition: width 1.5s 1.2s;
+}
+
+#container .--active.work .work__list > li:nth-child(4)::after {
+  width: 100%;
+  -webkit-transition: width 1.5s 1.5s;
+  transition: width 1.5s 1.5s;
+}
+
+#container .--active.work .work__list > li:nth-child(4) .circle-container {
+  opacity: 1;
+  -webkit-transition: opacity 1s 2s;
+  transition: opacity 1s 2s;
+}
+
+#container .--active.work .work__list > li:nth-child(4) .text-frame > span {
+  -webkit-transition-delay: 1.2s;
+          transition-delay: 1.2s;
+}
+
+#container .--active.contact .contact__message .text-frame:nth-child(4) > span {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+#container .--active.contact .contact__list li:nth-child(4)::before {
+  width: 100%;
+  -webkit-transition: width 1s 0.5s;
+  transition: width 1s 0.5s;
+}
+
+#container .--active.contact .contact__list li:nth-child(4)::after {
+  width: 100%;
+  -webkit-transition: width 1s 1.3s;
+  transition: width 1s 1.3s;
+}
+
+#container .--active.contact .contact__list li:nth-child(4) .text-frame > span {
+  -webkit-transition-delay: 1.3s;
+          transition-delay: 1.3s;
+}
+
+#container .--active.header .header__title .text-frame:nth-child(5) > span,
+#container .--active.header .header__year .text-frame:nth-child(5) > span,
+#container .--active.header .header__email .text-frame:nth-child(5) > span {
+  -webkit-transition-delay: 1.3s;
+          transition-delay: 1.3s;
+}
+
+#container .--active.header .header__nav .text-frame:nth-child(5) > span {
+  -webkit-transition-delay: 1.5s;
+          transition-delay: 1.5s;
+}
+
+#container .--active.intro .intro__title .text-frame > span {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+#container .--active.intro .intro__message .text-frame:nth-child(5) > span {
+  -webkit-transition-delay: 1.2s;
+          transition-delay: 1.2s;
+}
+
+#container .--active.intro .intro__current .text-frame > span {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+#container .--active.intro .intro__email .text-frame > span {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+#container .--active.about .about__intro .text-frame:nth-child(5) > span {
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+#container .--active.about .about__skills .text-frame:nth-child(5) > span {
+  -webkit-transition-delay: 1.1s;
+          transition-delay: 1.1s;
+}
+
+#container .--active.work .work__list > li:nth-child(5):first-child::before {
+  width: 100%;
+  -webkit-transition: width 1.5s 1.5s;
+  transition: width 1.5s 1.5s;
+}
+
+#container .--active.work .work__list > li:nth-child(5)::after {
+  width: 100%;
+  -webkit-transition: width 1.5s 1.8s;
+  transition: width 1.5s 1.8s;
+}
+
+#container .--active.work .work__list > li:nth-child(5) .circle-container {
+  opacity: 1;
+  -webkit-transition: opacity 1s 2.5s;
+  transition: opacity 1s 2.5s;
+}
+
+#container .--active.work .work__list > li:nth-child(5) .text-frame > span {
+  -webkit-transition-delay: 1.5s;
+          transition-delay: 1.5s;
+}
+
+#container .--active.contact .contact__message .text-frame:nth-child(5) > span {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+#container .--active.contact .contact__list li:nth-child(5)::before {
+  width: 100%;
+  -webkit-transition: width 1s 0.5s;
+  transition: width 1s 0.5s;
+}
+
+#container .--active.contact .contact__list li:nth-child(5)::after {
+  width: 100%;
+  -webkit-transition: width 1s 1.5s;
+  transition: width 1s 1.5s;
+}
+
+#container .--active.contact .contact__list li:nth-child(5) .text-frame > span {
+  -webkit-transition-delay: 1.5s;
+          transition-delay: 1.5s;
+}
+
+#container .--active.header .header__title .text-frame:nth-child(6) > span,
+#container .--active.header .header__year .text-frame:nth-child(6) > span,
+#container .--active.header .header__email .text-frame:nth-child(6) > span {
+  -webkit-transition-delay: 1.5s;
+          transition-delay: 1.5s;
+}
+
+#container .--active.header .header__nav .text-frame:nth-child(6) > span {
+  -webkit-transition-delay: 1.7s;
+          transition-delay: 1.7s;
+}
+
+#container .--active.intro .intro__title .text-frame > span {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+#container .--active.intro .intro__message .text-frame:nth-child(6) > span {
+  -webkit-transition-delay: 1.4s;
+          transition-delay: 1.4s;
+}
+
+#container .--active.intro .intro__current .text-frame > span {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+#container .--active.intro .intro__email .text-frame > span {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+#container .--active.about .about__intro .text-frame:nth-child(6) > span {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+#container .--active.about .about__skills .text-frame:nth-child(6) > span {
+  -webkit-transition-delay: 1.2s;
+          transition-delay: 1.2s;
+}
+
+#container .--active.work .work__list > li:nth-child(6):first-child::before {
+  width: 100%;
+  -webkit-transition: width 1.5s 1.8s;
+  transition: width 1.5s 1.8s;
+}
+
+#container .--active.work .work__list > li:nth-child(6)::after {
+  width: 100%;
+  -webkit-transition: width 1.5s 2.1s;
+  transition: width 1.5s 2.1s;
+}
+
+#container .--active.work .work__list > li:nth-child(6) .circle-container {
+  opacity: 1;
+  -webkit-transition: opacity 1s 3s;
+  transition: opacity 1s 3s;
+}
+
+#container .--active.work .work__list > li:nth-child(6) .text-frame > span {
+  -webkit-transition-delay: 1.8s;
+          transition-delay: 1.8s;
+}
+
+#container .--active.contact .contact__message .text-frame:nth-child(6) > span {
+  -webkit-transition-delay: 1.2s;
+          transition-delay: 1.2s;
+}
+
+#container .--active.contact .contact__list li:nth-child(6)::before {
+  width: 100%;
+  -webkit-transition: width 1s 0.5s;
+  transition: width 1s 0.5s;
+}
+
+#container .--active.contact .contact__list li:nth-child(6)::after {
+  width: 100%;
+  -webkit-transition: width 1s 1.7s;
+  transition: width 1s 1.7s;
+}
+
+#container .--active.contact .contact__list li:nth-child(6) .text-frame > span {
+  -webkit-transition-delay: 1.7s;
+          transition-delay: 1.7s;
+}
+
+#container .--active.header .header__title .text-frame:nth-child(7) > span,
+#container .--active.header .header__year .text-frame:nth-child(7) > span,
+#container .--active.header .header__email .text-frame:nth-child(7) > span {
+  -webkit-transition-delay: 1.7s;
+          transition-delay: 1.7s;
+}
+
+#container .--active.header .header__nav .text-frame:nth-child(7) > span {
+  -webkit-transition-delay: 1.9s;
+          transition-delay: 1.9s;
+}
+
+#container .--active.intro .intro__title .text-frame > span {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+#container .--active.intro .intro__message .text-frame:nth-child(7) > span {
+  -webkit-transition-delay: 1.6s;
+          transition-delay: 1.6s;
+}
+
+#container .--active.intro .intro__current .text-frame > span {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+#container .--active.intro .intro__email .text-frame > span {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+#container .--active.about .about__intro .text-frame:nth-child(7) > span {
+  -webkit-transition-delay: 0.7s;
+          transition-delay: 0.7s;
+}
+
+#container .--active.about .about__skills .text-frame:nth-child(7) > span {
+  -webkit-transition-delay: 1.3s;
+          transition-delay: 1.3s;
+}
+
+#container .--active.work .work__list > li:nth-child(7):first-child::before {
+  width: 100%;
+  -webkit-transition: width 1.5s 2.1s;
+  transition: width 1.5s 2.1s;
+}
+
+#container .--active.work .work__list > li:nth-child(7)::after {
+  width: 100%;
+  -webkit-transition: width 1.5s 2.4s;
+  transition: width 1.5s 2.4s;
+}
+
+#container .--active.work .work__list > li:nth-child(7) .circle-container {
+  opacity: 1;
+  -webkit-transition: opacity 1s 3.5s;
+  transition: opacity 1s 3.5s;
+}
+
+#container .--active.work .work__list > li:nth-child(7) .text-frame > span {
+  -webkit-transition-delay: 2.1s;
+          transition-delay: 2.1s;
+}
+
+#container .--active.contact .contact__message .text-frame:nth-child(7) > span {
+  -webkit-transition-delay: 1.4s;
+          transition-delay: 1.4s;
+}
+
+#container .--active.contact .contact__list li:nth-child(7)::before {
+  width: 100%;
+  -webkit-transition: width 1s 0.5s;
+  transition: width 1s 0.5s;
+}
+
+#container .--active.contact .contact__list li:nth-child(7)::after {
+  width: 100%;
+  -webkit-transition: width 1s 1.9s;
+  transition: width 1s 1.9s;
+}
+
+#container .--active.contact .contact__list li:nth-child(7) .text-frame > span {
+  -webkit-transition-delay: 1.9s;
+          transition-delay: 1.9s;
+}
+
+#container .--active.header .header__title .text-frame:nth-child(8) > span,
+#container .--active.header .header__year .text-frame:nth-child(8) > span,
+#container .--active.header .header__email .text-frame:nth-child(8) > span {
+  -webkit-transition-delay: 1.9s;
+          transition-delay: 1.9s;
+}
+
+#container .--active.header .header__nav .text-frame:nth-child(8) > span {
+  -webkit-transition-delay: 2.1s;
+          transition-delay: 2.1s;
+}
+
+#container .--active.intro .intro__title .text-frame > span {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+#container .--active.intro .intro__message .text-frame:nth-child(8) > span {
+  -webkit-transition-delay: 1.8s;
+          transition-delay: 1.8s;
+}
+
+#container .--active.intro .intro__current .text-frame > span {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+#container .--active.intro .intro__email .text-frame > span {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+#container .--active.about .about__intro .text-frame:nth-child(8) > span {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+#container .--active.about .about__skills .text-frame:nth-child(8) > span {
+  -webkit-transition-delay: 1.4s;
+          transition-delay: 1.4s;
+}
+
+#container .--active.work .work__list > li:nth-child(8):first-child::before {
+  width: 100%;
+  -webkit-transition: width 1.5s 2.4s;
+  transition: width 1.5s 2.4s;
+}
+
+#container .--active.work .work__list > li:nth-child(8)::after {
+  width: 100%;
+  -webkit-transition: width 1.5s 2.7s;
+  transition: width 1.5s 2.7s;
+}
+
+#container .--active.work .work__list > li:nth-child(8) .circle-container {
+  opacity: 1;
+  -webkit-transition: opacity 1s 4s;
+  transition: opacity 1s 4s;
+}
+
+#container .--active.work .work__list > li:nth-child(8) .text-frame > span {
+  -webkit-transition-delay: 2.4s;
+          transition-delay: 2.4s;
+}
+
+#container .--active.contact .contact__message .text-frame:nth-child(8) > span {
+  -webkit-transition-delay: 1.6s;
+          transition-delay: 1.6s;
+}
+
+#container .--active.contact .contact__list li:nth-child(8)::before {
+  width: 100%;
+  -webkit-transition: width 1s 0.5s;
+  transition: width 1s 0.5s;
+}
+
+#container .--active.contact .contact__list li:nth-child(8)::after {
+  width: 100%;
+  -webkit-transition: width 1s 2.1s;
+  transition: width 1s 2.1s;
+}
+
+#container .--active.contact .contact__list li:nth-child(8) .text-frame > span {
+  -webkit-transition-delay: 2.1s;
+          transition-delay: 2.1s;
+}
+
+#container .--active.header .header__title .text-frame:nth-child(9) > span,
+#container .--active.header .header__year .text-frame:nth-child(9) > span,
+#container .--active.header .header__email .text-frame:nth-child(9) > span {
+  -webkit-transition-delay: 2.1s;
+          transition-delay: 2.1s;
+}
+
+#container .--active.header .header__nav .text-frame:nth-child(9) > span {
+  -webkit-transition-delay: 2.3s;
+          transition-delay: 2.3s;
+}
+
+#container .--active.intro .intro__title .text-frame > span {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+#container .--active.intro .intro__message .text-frame:nth-child(9) > span {
+  -webkit-transition-delay: 2s;
+          transition-delay: 2s;
+}
+
+#container .--active.intro .intro__current .text-frame > span {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+#container .--active.intro .intro__email .text-frame > span {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+#container .--active.about .about__intro .text-frame:nth-child(9) > span {
+  -webkit-transition-delay: 0.9s;
+          transition-delay: 0.9s;
+}
+
+#container .--active.about .about__skills .text-frame:nth-child(9) > span {
+  -webkit-transition-delay: 1.5s;
+          transition-delay: 1.5s;
+}
+
+#container .--active.work .work__list > li:nth-child(9):first-child::before {
+  width: 100%;
+  -webkit-transition: width 1.5s 2.7s;
+  transition: width 1.5s 2.7s;
+}
+
+#container .--active.work .work__list > li:nth-child(9)::after {
+  width: 100%;
+  -webkit-transition: width 1.5s 3s;
+  transition: width 1.5s 3s;
+}
+
+#container .--active.work .work__list > li:nth-child(9) .circle-container {
+  opacity: 1;
+  -webkit-transition: opacity 1s 4.5s;
+  transition: opacity 1s 4.5s;
+}
+
+#container .--active.work .work__list > li:nth-child(9) .text-frame > span {
+  -webkit-transition-delay: 2.7s;
+          transition-delay: 2.7s;
+}
+
+#container .--active.contact .contact__message .text-frame:nth-child(9) > span {
+  -webkit-transition-delay: 1.8s;
+          transition-delay: 1.8s;
+}
+
+#container .--active.contact .contact__list li:nth-child(9)::before {
+  width: 100%;
+  -webkit-transition: width 1s 0.5s;
+  transition: width 1s 0.5s;
+}
+
+#container .--active.contact .contact__list li:nth-child(9)::after {
+  width: 100%;
+  -webkit-transition: width 1s 2.3s;
+  transition: width 1s 2.3s;
+}
+
+#container .--active.contact .contact__list li:nth-child(9) .text-frame > span {
+  -webkit-transition-delay: 2.3s;
+          transition-delay: 2.3s;
+}
+
+#cursor {
+  position: fixed;
+  left: 150px;
+  top: -120px;
+  pointer-events: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media (max-width: 1100px) {
+  #cursor {
+    display: none;
+  }
+}
+
+.header {
+  width: 90vw;
+  height: calc(100vh - 10vw);
+  position: absolute;
+  top: 5vw;
+}
+
+.header .header__title {
+  position: absolute;
+  font-size: 0.875rem;
+}
+
+.header .header__year {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.875rem;
+}
+
+.header .header__nav {
+  position: fixed;
+  bottom: 5vw;
+}
+
+.header .header__nav .header__nav__list > li span {
+  display: inline-block;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.header .header__nav .header__nav__list > li span .underline {
+  display: block;
+  width: 0%;
+  height: 1px;
+  background: black;
+  -webkit-transition: width 0.5s !important;
+  transition: width 0.5s !important;
+  position: relative;
+  top: -1px;
+}
+
+.header .header__nav .header__nav__list > li span:hover > .underline {
+  width: 100%;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+.header .header__nav.--about .header__nav__list > li:first-child .underline {
+  width: 100%;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+.header .header__nav.--work .header__nav__list > li:nth-child(2) .underline {
+  width: 100%;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+.header .header__nav.--contact .header__nav__list > li:nth-child(3) .underline {
+  width: 100%;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+@media (max-width: 600px) {
+  .header .header__nav {
+    display: none;
+  }
+}
+
+.right-container .intro {
+  height: 100vh;
+  text-align: right;
+}
+
+.right-container .intro .intro__innerbox {
+  height: 100vh;
+  position: relative;
+}
+
+.right-container .intro .intro__innerbox .intro__innerbox2 {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.right-container .intro .intro__title {
+  margin-bottom: 10px;
+  font-size: 14rem;
+  letter-spacing: -0.5rem;
+}
+
+.right-container .intro .intro__message {
+  margin-bottom: 20px;
+  font-size: 0.875rem;
+}
+
+.right-container .intro .intro__current {
+  margin-bottom: 10px;
+  font-size: 1.125rem;
+}
+
+.right-container .intro .intro__email {
+  font-size: 1.125rem;
+  text-decoration: underline;
+}
+
+@media (max-width: 1280px) {
+  .right-container .intro .intro__title {
+    font-size: 12rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .right-container .intro .intro__title {
+    font-size: 33vw;
+  }
+}
+
+.right-container .about {
+  padding-bottom: 30vw;
+}
+
+.right-container .about .about__intro {
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+}
+
+.right-container .about .about__intro .text-frame:first-child {
+  margin-left: 20%;
+}
+
+.right-container .about .about__skills .about__skills__title {
+  margin-bottom: 5px;
+  font-size: 1.25rem;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.right-container .about .about__skills p {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1280px) {
+  .right-container .about .about__intro,
+  .right-container .about .about__skills > p {
+    font-size: 2vw;
+  }
+  .right-container .about .about__skills > .about__skills__title {
+    font-size: 1.8vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .right-container .about .about__intro,
+  .right-container .about .about__skills > p {
+    font-size: 2.8vw;
+  }
+  .right-container .about .about__skills > .about__skills__title {
+    font-size: 2.6vw;
+  }
+}
+
+.right-container .work {
+  padding-bottom: 30vw;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.right-container .work .work__title {
+  margin-bottom: 2vw;
+  font-size: 16rem;
+  font-weight: 600;
+  letter-spacing: -20px;
+}
+
+.right-container .work .work__item {
+  padding: 30px 0;
+  position: relative;
+}
+
+.right-container .work .work__item:first-child::before {
+  display: block;
+  content: "";
+  width: 0;
+  height: 1px;
+  background: black;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.right-container .work .work__item::after {
+  display: block;
+  content: "";
+  width: 0;
+  height: 1px;
+  background: black;
+  opacity: 0.2;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.right-container .work .work__item a {
+  display: block;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr 5vw;
+      grid-template-columns: 50px 1fr 5vw;
+}
+
+.right-container .work .work__item a .work__item__num {
+  height: 0.8rem;
+  margin-top: 5px;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.right-container .work .work__item a .work__item__title {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 3.8rem;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px #f7f3f0;
+}
+
+.right-container .work .work__item a .work__item__tech {
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px #f7f3f0;
+}
+
+.right-container .work .work__item a .circle-container {
+  opacity: 0;
+}
+
+.right-container .work .work__item a .circle-container .circle,
+.right-container .work .work__item a .circle-container .circle--behind {
+  width: calc(5.4vw + 5px);
+  height: calc(5.4vw + 5px);
+  position: absolute;
+  top: 50%;
+  right: 2vw;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+}
+
+.right-container .work .work__item a .circle-container .circle circle,
+.right-container .work .work__item a .circle-container .circle--behind circle {
+  stroke: black;
+  stroke-width: 1px;
+  fill: none;
+}
+
+.right-container .work .work__item a .circle-container .circle {
+  z-index: 2;
+  overflow: hidden;
+}
+
+.right-container .work .work__item a .circle-container .circle circle {
+  stroke-width: 2px;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+.right-container .work .work__item a .circle-container .circle span {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  font-size: 48px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 5.4vw;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.right-container .work .work__item a .circle-container .circle span.hidden-arrow {
+  top: 100%;
+}
+
+.right-container .work .work__item a .circle-container .circle--behind {
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.right-container .work .work__item a:hover .circle circle {
+  -webkit-animation: stroke 1.2s ease-in-out forwards;
+          animation: stroke 1.2s ease-in-out forwards;
+}
+
+@-webkit-keyframes stroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes stroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.right-container .work .work__item a:hover .circle span {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+@media (max-width: 1280px) {
+  .right-container .work .work__title {
+    font-size: 20vw;
+  }
+}
+
+@media (max-width: 1020px) {
+  .right-container .work .circle-container {
+    display: none;
+  }
+}
+
+@media (max-width: 780px) {
+  .right-container .work .work__title {
+    font-size: 24vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .right-container .work .work__title {
+    font-size: 26vw;
+  }
+  .right-container .work .work__list > li .work__list__title {
+    margin-bottom: 0;
+    font-size: 12vw;
+  }
+  .right-container .work .work__list > li .work__list__Tech {
+    font-size: 4.2vw;
+  }
+}
+
+.right-container .contact .contact__title {
+  margin-bottom: 30px;
+  font-size: 12rem;
+  font-weight: 600;
+  letter-spacing: -1rem;
+}
+
+.right-container .contact .contact__message {
+  margin-bottom: 70px;
+  font-size: 2rem;
+  letter-spacing: -0.1rem;
+  font-weight: 600;
+}
+
+.right-container .contact .contact__list {
+  margin-bottom: 10vw;
+}
+
+.right-container .contact .contact__list li {
+  width: 50%;
+  padding: 30px 0;
+  font-size: 1.125rem;
+  position: relative;
+}
+
+.right-container .contact .contact__list li:first-child::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: black;
+  opacity: 0.2;
+}
+
+.right-container .contact .contact__list li::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: black;
+  opacity: 0.2;
+}
+
+.right-container .contact .contact__list li:last-child a {
+  text-decoration: underline;
+}
+
+@media (max-width: 1280px) {
+  .right-container .contact .contact__title {
+    font-size: 15vw;
+  }
+  .right-container .contact .contact__message {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 780px) {
+  .right-container .contact .contact__list > li {
+    width: 80%;
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .right-container .contact .contact__title {
+    font-size: 22vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .right-container .contact .contact__message {
+    font-size: 5vw;
+  }
+}
+
+.right-container footer {
+  padding: 10px 0 20px;
+  border-top: 1px solid black;
+  font-size: 14px;
+  text-align: right;
+}
+
+@media (max-width: 480px) {
+  .right-container footer {
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=Home.css.map */
