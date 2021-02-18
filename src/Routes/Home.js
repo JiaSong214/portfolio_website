@@ -105,10 +105,6 @@ export default () => {
 
   return (
     <div id="container" className={currentPosition}>
-      {/* <div
-        className="scroll"
-        style={{ transform: `translate3d(0, -${scrollHeight}px, 0)` }}
-      > */}
       <div id="cursor">
         <video width="480px" autoPlay loop muted src="" />
       </div>
@@ -220,29 +216,21 @@ export default () => {
           {/* <div className="about__Image"></div> */}
           <p className="about__intro">
             <span className="text-frame">
-              <span>Lorem ipsum dolor sit amet.</span>
+              <span>Welcome to my page! I'm Jia from South Korea.</span>
             </span>
             <span className="text-frame">
               <span>
-                consectetur adipiscing elit. Sed vitae tortor ultricies,
+                I started to learn Web development during the covid19,
               </span>
             </span>
             <span className="text-frame">
               <span>
-                consequat dolor quis, pretium mauris. Pellentesque habitant
-                morbi.
+                And I'm really into it now. I love design and turn them in to real.
               </span>
             </span>
             <span className="text-frame">
               <span>
-                tristique senectus et netus et malesuada fames ac turpis
-                egestas.
-              </span>
-            </span>
-            <span className="text-frame">
-              <span>
-                Maecenas porttitor mi in lectus vehicula, non viverra sapien
-                pharetra.
+                I like learing new things, and I'm good at details.
               </span>
             </span>
           </p>
@@ -266,7 +254,7 @@ export default () => {
             <span>WORK</span>
           </h2>
           <ul className="work__list">
-            <li className="work__item">
+            {/* <li className="work__item">
               <Link
                 to="/"
                 onMouseEnter={() => setHoverEffect.comingSoon()}
@@ -284,9 +272,6 @@ export default () => {
                       <span>Soon</span>
                     </div>
                   </h3>
-                  <p className="work__item__tech text-frame">
-                    <span>React, TypeScript, SASS, GraphQL</span>
-                  </p>
                 </div>
                 <div className="circle-container">
                   <div className="circle">
@@ -296,7 +281,7 @@ export default () => {
                         cy="2.85vw"
                         r="2.8vw"
                         stroke="black"
-                        stroke-width="2"
+                        strokeWidth="2"
                         fill="none"
                       />
                     </svg>
@@ -310,17 +295,16 @@ export default () => {
                         cy="2.85vw"
                         r="2.8vw"
                         stroke="black"
-                        stroke-width="1"
+                        strokeWidth="1"
                         fill="none"
                       />
                     </svg>
                   </div>
                 </div>
               </Link>
-            </li>
+            </li>*/}
             <li className="work__item">
-              <Link
-                to="/NetflixClone"
+              <a href={'//jiasong214.github.io/netflix_clone/#/'} target='_blank'
                 onMouseEnter={() => setHoverEffect.netflixClone()}
                 onMouseLeave={() => setHoverEffect.mouseLeaveFromItem()}
               >
@@ -349,7 +333,7 @@ export default () => {
                         cy="2.85vw"
                         r="2.8vw"
                         stroke="black"
-                        stroke-width="2"
+                        strokeWidth="2"
                         fill="none"
                       />
                     </svg>
@@ -363,17 +347,16 @@ export default () => {
                         cy="2.85vw"
                         r="2.8vw"
                         stroke="black"
-                        stroke-width="1"
+                        strokeWidth="1"
                         fill="none"
                       />
                     </svg>
                   </div>
                 </div>
-              </Link>
+              </a>
             </li>
             <li className="work__item">
-              <Link
-                to="/ViolinStore"
+              <a href={'//jiasong214.github.io/violin_store/'} target='_blank'
                 onMouseEnter={() => setHoverEffect.violinStore()}
                 onMouseLeave={() => setHoverEffect.mouseLeaveFromItem()}
               >
@@ -408,11 +391,10 @@ export default () => {
                     </svg>
                   </div>
                 </div>
-              </Link>
+              </a>
             </li>
             <li className="work__item">
-              <Link
-                to="/JavascriptProject"
+            <a href={'//jiasong214.github.io/javascript_project/'} target='_blank'
                 onMouseEnter={() => setHoverEffect.javascriptProject()}
                 onMouseLeave={() => setHoverEffect.mouseLeaveFromItem()}
               >
@@ -428,7 +410,6 @@ export default () => {
                       <span>Project</span>
                     </div>
                   </h3>
-
                   <p className="work__item__tech text-frame">
                     <span>ES6, MVC Pattern, CSS3, HTML5</span>
                   </p>
@@ -441,7 +422,7 @@ export default () => {
                         cy="2.85vw"
                         r="2.8vw"
                         stroke="black"
-                        stroke-width="2"
+                        strokeWidth="2"
                         fill="none"
                       />
                     </svg>
@@ -455,28 +436,21 @@ export default () => {
                         cy="2.85vw"
                         r="2.8vw"
                         stroke="black"
-                        stroke-width="1"
+                        strokeWidth="1"
                         fill="none"
                       />
                     </svg>
                   </div>
                 </div>
-              </Link>
+              </a>
             </li>
           </ul>
+          <p className="work__code">For code, <a href={'//github.com/JiaSong214'} target='_blank'>click here</a></p>
         </section>
         <section className={`contact ${contactAni}`} ref={contactRef}>
           <h2 className="contact__title text-frame">
             <span>CONTACT</span>
           </h2>
-          <p className="contact__message">
-            <span className="text-frame">
-              <span>consequat dolor quis, pretium mauris.</span>
-            </span>
-            <span className="text-frame">
-              <span>tristique senectus et netus et malesuada.</span>
-            </span>
-          </p>
           <ul className="contact__list">
             <li>
               <span className="text-frame">
@@ -489,13 +463,17 @@ export default () => {
             </li>
             <li>
               <span className="text-frame">
-                <span>+061 0413 173 676</span>
+                <span>+061 413 173 676</span>
               </span>
             </li>
             <li>
               <span className="text-frame">
                 <span>
-                  <a href="https://github.com/JiaSong214" target="_blank">
+                  <a
+                    href="https://github.com/JiaSong214"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Github
                   </a>
                 </span>

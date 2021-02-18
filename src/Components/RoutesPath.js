@@ -22,7 +22,6 @@ const RoutesPath = ({ location }) => {
         <Switch location={location}>
           <Route exact path="/" component={Home} />
           <Route path="/NetflixClone" component={NetflixClone} />
-          <Route path="/" />
           <Route path="/JavascriptProject" component={JavascriptProject} />
           <Route path="/ViolinStore" component={ViolinStore} />
           <Route component={() => <Redirect to="/" />} />

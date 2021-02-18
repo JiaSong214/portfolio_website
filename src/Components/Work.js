@@ -62,14 +62,18 @@ export default ({
             <ul className="case-study__meta__Link">
               <li className="text-frame">
                 <span>
-                  <a href={demoLink} target="_blank">
+                  <a href={demoLink} target="_blank" rel="noopener noreferrer">
                     Demo
                   </a>
                 </span>
               </li>
               <li className="text-frame">
                 <span>
-                  <a href={githubLink} target="_blank">
+                  <a
+                    href={githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Github
                   </a>
                 </span>

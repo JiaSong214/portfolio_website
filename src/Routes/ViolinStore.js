@@ -16,8 +16,8 @@ export default () => (
     }
     Date="11.2020"
     Tech="HTML5, CSS3, JavaScript"
-    demoLink="https://jiasong214.github.io/violin_shop/"
-    githubLink="https://github.com/JiaSong214/violin_shop/"
+    demoLink="https://jiasong214.github.io/violin_store/"
+    githubLink="https://github.com/JiaSong214/violin_store/"
     Description={
       <span>
         <span className="text-frame">
